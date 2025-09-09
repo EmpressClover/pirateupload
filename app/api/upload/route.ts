@@ -28,7 +28,8 @@ export async function POST(req: NextRequest) {
         .map((s) => s.trim())
         .filter(Boolean);
       const url = new URL(req.url);
-      const provided = req.headers.get('x-api-key') || url.searchParams.get('api_key');
+      const providedRaw = req.headers.get('x-api-key') || url.searchParams.get('api_key');
+      const provided = (providedRaw || '').trim();
       if (!provided || !allowed.includes(provided)) {
         return corsJson({ error: 'Invalid or missing API key' }, { status: 401 });
       }
