@@ -1,0 +1,37 @@
+:root {
+  --bg: #0b0f14;
+  --fg: #e6edf3;
+  --muted: #a0aab6;
+  --border: #1e2a36;
+  --accent: #2ea043;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.page, .container { max-width: 720px; margin: 0 auto; padding: 40px 16px; }
+.appTitle, .title { font-size: 22px; font-weight: 600; margin-bottom: 16px; }
+.panel, .card { border: 1px solid var(--border); border-radius: 10px; padding: 16px; background: #0e141a; }
+.subtle, .muted { color: var(--muted); font-size: 13px; }
+.row { display: grid; gap: 12px; }
+.appTitle, .title { text-align: center; }
+
+.textInput, .input { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border); background: #0c1218; color: var(--fg); }
+.button, .btn { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border); background: #0c1218; color: var(--fg); cursor: pointer; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #05120a; font-weight: 600; }
+.buttonPrimary { padding: 10px 12px; border-radius: 8px; border: 1px solid var(--accent); background: var(--accent); color: #05120a; font-weight: 600; cursor: pointer; }
+
+.sectionStack, .stack { display: grid; gap: 8px; }
+.inlineRow, .inline { display: flex; gap: 8px; align-items: center; }
+.inlineRow > .textInput, .inline > .input { flex: 1; }
+
+.imagePreview, .preview { border: 1px dashed var(--border); border-radius: 8px; min-height: 200px; display: grid; place-items: center; overflow: hidden; background: #0b1016; }
+.imagePreview img, .preview img { max-width: 100%; max-height: 360px; display: block; }
+.monoText, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; }
+.footerNote, .footer { margin-top: 16px; color: var(--muted); font-size: 12px; text-align: center; }

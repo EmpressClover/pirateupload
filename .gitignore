@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+.next/cache/
+out/
+
+# Vercel/Turbo
+.vercel/
+.vercel/output/
+.turbo/
+
+# Coverage and caches
+coverage/
+.eslintcache
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment files (keep secrets out of git)
+.env
+.env.*
+!.env.example
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.idea/
+*.iml
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# OneDrive/Office temp files
+~$*
+
