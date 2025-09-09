@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createAdminSession, isPasswordValid } from '@/lib/auth';
+import { createAdminSession, isPasswordValid } from 'lib/auth';
 
 export async function POST(req: NextRequest) {
   try {
@@ -21,4 +21,3 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Bad request' }, { status: 400 });
   }
 }
-

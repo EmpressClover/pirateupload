@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { list } from '@vercel/blob';
-import { verifyAdminSession } from '@/lib/auth';
+import { verifyAdminSession } from 'lib/auth';
 
 export async function GET(req: NextRequest) {
   const cookie = req.cookies.get('admin_session')?.value;
@@ -26,4 +26,3 @@ export async function GET(req: NextRequest) {
     cursor: nextCursor ?? null,
   });
 }
-
