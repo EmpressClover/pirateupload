@@ -21,7 +21,6 @@ export async function GET(req: NextRequest) {
       url: b.url,
       size: b.size,
       uploadedAt: b.uploadedAt,
-      contentType: b.contentType,
     })),
     cursor: nextCursor ?? null,
   });
